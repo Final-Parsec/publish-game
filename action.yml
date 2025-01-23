@@ -1,13 +1,17 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Publish Game'
+description: 'Publish a WebGL game to Final Parsec.'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  game-name:
+    description: 'The name of the game to publish'
     required: true
-    default: 'World'
+    default: 'Untitled Game'
+  asset-directory:
+    description: 'The directory containing assets to be published'
+    required: true
+    default: '/fp-publish'
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  time:
+    description: 'The time the game was published'
 runs:
   using: 'docker'
   image: 'Dockerfile'
