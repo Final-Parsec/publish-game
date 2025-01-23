@@ -16,4 +16,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.game-name }}
+    - ${{ inputs.asset-directory }}
