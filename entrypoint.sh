@@ -19,7 +19,7 @@ echo '", "assets": [' > $PAYLOAD_FILE
 # Iterate over all files in the directory
 FIRST=true
 for FILE in "$2"/*; do
-  BASE64_DATA="data:application/octet-stream;base64,$(base64 -i "$FILE")"
+  BASE64_DATA="data:application/octet-stream;base64,$(base64 "$FILE")"
   FILENAME=$(basename "$FILE")
   
   # Add a comma before each entry except the first
