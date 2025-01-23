@@ -1,4 +1,8 @@
 name: 'Publish Game'
+author: 'Final Parsec, LLC'
+branding:
+  icon: 'award'
+  color: 'green'
 description: 'Publish a WebGL game to Final Parsec.'
 inputs:
   game-name:
@@ -8,7 +12,7 @@ inputs:
   asset-directory:
     description: 'The directory containing assets to be published'
     required: true
-    default: '/fp-publish'
+    default: 'fp-publish'
 outputs:
   time:
     description: 'The time the game was published'

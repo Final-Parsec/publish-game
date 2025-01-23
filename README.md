@@ -12,7 +12,7 @@ Relies on the Final Parsec API documented here: https://www.finalparsec.com/docs
 
 ## `asset-directory`
 
-**Required** The directory containing assets to be published. Default `"/fp-publish"`
+**Required** The directory containing assets to be published. Default `"fp-publish"`
 
 ## Outputs
 
@@ -22,6 +22,8 @@ The time the game was published.
 
 ## Example usage
 
+```
 uses: Final-Parsec/publish-game@v1
 with:
   game-name: 'Aurora Tower Defense'
+```
