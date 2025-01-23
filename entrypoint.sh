@@ -12,9 +12,7 @@ ls $2
 PAYLOAD_FILE="payload.json"
 
 # Start the JSON payload
-echo '{ "game": { "name": "' > $PAYLOAD_FILE
-echo $1 > $PAYLOAD_FILE
-echo '", "assets": [' > $PAYLOAD_FILE
+echo "{ \"game\": { \"name\": \"$(echo "$1" | sed 's/["]/\\\\"/g')\", \"assets\": [" > $PAYLOAD_FILE
 
 # Iterate over all files in the directory
 FIRST=true
